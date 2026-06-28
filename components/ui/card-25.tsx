@@ -46,12 +46,14 @@ export const AnimatedHikeCard = React.forwardRef<
                 "absolute h-full w-[40%] overflow-hidden rounded-lg border-2 border-background shadow-md transition-all duration-300 ease-in-out",
                 "group-hover:translate-x-[var(--tx)] group-hover:rotate-[var(--r)]"
               )}
-              style={{
-                transform: `translateX(${index * 32}px)`,
-                '--tx': `${index * 80}px`,
-                '--r': `${index * 5 - 5}deg`,
-                zIndex: images.length - index,
-              } as React.CSSProperties & Record<string, string>}
+              style={
+                {
+                  transform: `translateX(${index * 32}px)`,
+                  '--tx': `${index * 80}px`,
+                  '--r': `${index * 5 - 5}deg`,
+                  zIndex: images.length - index,
+                } as unknown as React.CSSProperties
+              }
             >
               <img
                 src={src}

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
@@ -75,7 +75,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-28 pb-16">
       {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -101,7 +101,7 @@ export default function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto my-auto">
         <p
           className="section-label mb-6 animate-[fadeIn_0.8s_ease_0.2s_both]"
           style={{ opacity: 0, animation: "slideUp 0.8s ease 0.2s forwards" }}
