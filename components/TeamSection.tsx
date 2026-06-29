@@ -64,12 +64,12 @@ export default function TeamSection() {
             </h2>
           </div>
           <p className="text-[0.875rem] text-[#BBBBBB] max-w-xs leading-relaxed md:text-right">
-            Dedicated professionals who've made barbering a refined, elevated art form.
+            Dedicated professionals who&apos;ve made barbering a refined, elevated art form.
           </p>
         </div>
 
         {/* Card grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
           {TEAM.map((member, i) => (
             <div
               key={member.name}

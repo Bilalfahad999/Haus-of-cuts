@@ -99,7 +99,7 @@ export default function ServicesSection() {
         </div>
 
         {/* Card grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5">
           {SERVICES.map((s, i) => (
             <div
               key={s.name}

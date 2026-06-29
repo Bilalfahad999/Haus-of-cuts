@@ -24,9 +24,22 @@ export function InteractiveProductCard({
 }: InteractiveProductCardProps) {
   const cardRef = React.useRef<HTMLDivElement>(null);
   const [style, setStyle] = React.useState<React.CSSProperties>({});
+  const [isHoverable, setIsHoverable] = React.useState(false);
+
+  React.useEffect(() => {
+    const mediaQuery = window.matchMedia("(hover: hover)");
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setIsHoverable(mediaQuery.matches);
+
+    const handler = (e: MediaQueryListEvent) => {
+      setIsHoverable(e.matches);
+    };
+    mediaQuery.addEventListener("change", handler);
+    return () => mediaQuery.removeEventListener("change", handler);
+  }, []);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!cardRef.current) return;
+    if (!isHoverable || !cardRef.current) return;
     const { left, top, width, height } = cardRef.current.getBoundingClientRect();
     const x = e.clientX - left;
     const y = e.clientY - top;
@@ -39,20 +52,33 @@ export function InteractiveProductCard({
   };
 
   const handleMouseLeave = () => {
+    if (!isHoverable) return;
     setStyle({
       transform: "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)",
       transition: "transform 0.4s ease-in-out",
     });
   };
 
+  const parentStyle: React.CSSProperties = isHoverable
+    ? { ...style, transformStyle: "preserve-3d" }
+    : {};
+
+  const imageStyle: React.CSSProperties = isHoverable
+    ? { transform: "translateZ(-20px) scale(1.1)" }
+    : {};
+
+  const contentStyle: React.CSSProperties = isHoverable
+    ? { transform: "translateZ(40px)" }
+    : {};
+
   return (
     <div
       ref={cardRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      style={{ ...style, transformStyle: "preserve-3d" }}
+      style={parentStyle}
       className={cn(
-        "relative w-full aspect-[9/12] rounded-3xl bg-[#111111] shadow-lg overflow-hidden",
+        "relative w-full aspect-[9/12] rounded-2xl md:rounded-3xl bg-[#111111] shadow-lg overflow-hidden transition-transform duration-300",
         className
       )}
       {...props}
@@ -61,30 +87,34 @@ export function InteractiveProductCard({
       <img
         src={imageUrl}
         alt={title}
-        className="absolute inset-0 h-full w-full object-cover rounded-3xl"
-        style={{ transform: "translateZ(-20px) scale(1.1)" }}
+        className="absolute inset-0 h-full w-full object-cover rounded-2xl md:rounded-3xl"
+        style={imageStyle}
         loading="lazy"
       />
 
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent rounded-3xl" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent rounded-2xl md:rounded-3xl" />
 
       {/* Content */}
       <div
-        className="absolute inset-0 p-5 flex flex-col justify-end"
-        style={{ transform: "translateZ(40px)" }}
+        className="absolute inset-0 p-3 md:p-5 flex flex-col justify-end"
+        style={contentStyle}
       >
         {/* Glassmorphism footer */}
-        <div className="flex items-end justify-between rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md">
-          <div className="flex flex-col">
+        <div className="flex items-end justify-between rounded-xl border border-white/10 bg-white/5 p-2.5 md:p-4 backdrop-blur-md">
+          <div className="flex flex-col min-w-0 flex-1">
             {/* Price pill */}
-            <div className="mb-2">
-              <div className="inline-block rounded-full bg-[rgba(196,120,58,0.85)] px-4 py-1.5 text-sm font-700 text-[#080808] backdrop-blur-sm">
+            <div className="mb-1 md:mb-2">
+              <div className="inline-block rounded-full bg-[rgba(196,120,58,0.85)] px-2.5 py-1 text-[10px] md:text-sm font-700 text-[#080808] backdrop-blur-sm leading-none">
                 {price}
               </div>
             </div>
-            <h3 className="text-lg font-bold text-white leading-snug">{title}</h3>
-            <p className="text-xs text-white/70 mt-0.5">{description}</p>
+            <h3 className="text-xs sm:text-sm md:text-lg font-bold text-white leading-tight">
+              {title}
+            </h3>
+            <p className="text-[10px] md:text-xs text-white/70 mt-0.5 line-clamp-2 md:line-clamp-none">
+              {description}
+            </p>
           </div>
           {logoNode ? (
             <div className="shrink-0 ml-2 text-[#C4783A]">{logoNode}</div>
