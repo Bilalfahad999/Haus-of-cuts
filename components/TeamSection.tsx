@@ -6,9 +6,9 @@ import { InteractiveProductCard } from "@/components/ui/card-7";
 
 const TEAM = [
   {
-    name: "Marcus Reid",
+    name: "Billy",
     role: "Master Barber & Founder",
-    experience: "12 Yrs Experience",
+    experience: "14+ Yrs Experience",
     image: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=600&q=80",
   },
   {
