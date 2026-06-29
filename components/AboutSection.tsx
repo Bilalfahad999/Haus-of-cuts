@@ -37,7 +37,7 @@ function AnimatedNumber({ target, suffix }: { target: number; suffix: string }) 
 }
 
 const STATS = [
-  { value: 10, suffix: "+", label: "Years" },
+  { value: 14, suffix: "+", label: "Years" },
   { value: 5000, suffix: "+", label: "Clients" },
   { value: 4.9, suffix: "★", label: "Rating" },
 ];
