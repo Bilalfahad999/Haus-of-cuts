@@ -110,10 +110,11 @@ export default function HeroSection() {
         </p>
 
         <h1
-          className="font-serif text-[clamp(2.8rem,7vw,6rem)] font-800 leading-[1.08] text-[#FFFFFF] mb-6"
+          className="font-serif text-[clamp(2.8rem,7vw,6rem)] font-800 leading-[1.22] md:leading-[1.08] text-[#FFFFFF] mb-6"
           style={{ opacity: 0, animation: "slideUp 0.8s ease 0.4s forwards" }}
         >
           Where{" "}
+          <br className="sm:hidden" />
           <span
             className="gold-text inline-block transition-all duration-400"
             style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(10px)" }}
