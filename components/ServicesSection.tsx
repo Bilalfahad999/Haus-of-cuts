@@ -10,7 +10,7 @@ const SERVICES = [
     desc: "Tailored to your style & face shape",
     price: "$45",
     popular: false,
-    image: "https://images.unsplash.com/photo-1622288432450-277d0fef5ed6?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1582095133179-bfd08e2533ce?w=600&q=80",
   },
   {
     name: "Skin Fade",
@@ -24,21 +24,21 @@ const SERVICES = [
     desc: "Bold, clean and effortless",
     price: "$35",
     popular: false,
-    image: "https://images.unsplash.com/photo-1590540599117-0de85cfee3a3?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1583243567109-1831b2a600f3?w=600&q=80",
   },
   {
     name: "Hair & Beard Combo",
     desc: "Complete grooming in one session",
     price: "$75",
     popular: true,
-    image: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1567894340315-735d7c361db0?w=600&q=80",
   },
   {
     name: "Kids Haircut",
     desc: "Gentle & precise for young gentlemen",
     price: "$30",
     popular: false,
-    image: "https://images.unsplash.com/photo-1534297635766-a262cdcb8ee4?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1560066984-138daaa7d558?w=600&q=80",
   },
   {
     name: "Hot Towel Shave",
@@ -52,7 +52,7 @@ const SERVICES = [
     desc: "Sculpted to complement your features",
     price: "$30",
     popular: false,
-    image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=80",
   },
   {
     name: "VIP Package",
