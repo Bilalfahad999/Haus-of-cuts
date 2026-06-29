@@ -9,7 +9,7 @@ const TEAM = [
     name: "Billy",
     role: "Master Barber & Founder",
     experience: "14+ Yrs Experience",
-    image: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1504257432389-52343af06ae3?w=600&q=80",
   },
   {
     name: "Devon Clarke",
