@@ -10,7 +10,7 @@ const SERVICES = [
     desc: "Tailored to your style & face shape",
     price: "$45",
     popular: false,
-    image: "https://images.unsplash.com/photo-1582095133179-bfd08e2533ce?w=600&q=80",
+    image: "/classic-haircut.jpg",
   },
   {
     name: "Skin Fade",
@@ -59,7 +59,7 @@ const SERVICES = [
     desc: "Cut, beard, hot towel & premium products",
     price: "$120",
     popular: false,
-    image: "https://images.unsplash.com/photo-1512864084360-7c0d4d2bce6e?w=600&q=80",
+    image: "/vip-package.jpg",
   },
 ];
 
@@ -123,7 +123,7 @@ export default function ServicesSection() {
                 description={s.desc}
                 price={s.price}
                 logoNode={s.popular ? <Star className="w-4 h-4 fill-current" /> : <Scissors className="w-4 h-4" />}
-                imagePosition={["Kids Haircut", "Buzz Cut", "Hot Towel Shave"].includes(s.name) ? "top" : "center"}
+                imagePosition={["Kids Haircut", "Buzz Cut", "Hot Towel Shave", "VIP Package"].includes(s.name) ? "top" : "center"}
                 className={s.popular ? "border border-[rgba(196,120,58,0.3)] shadow-[0_8px_32px_rgba(196,120,58,0.1)]" : ""}
               />
             </div>
