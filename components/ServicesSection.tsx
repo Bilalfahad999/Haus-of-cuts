@@ -31,7 +31,7 @@ const SERVICES = [
     desc: "Complete grooming in one session",
     price: "$75",
     popular: true,
-    image: "https://images.unsplash.com/photo-1567894340315-735d7c361db0?w=600&q=80",
+    image: "/hair-beard-combo.jpg",
   },
   {
     name: "Kids Haircut",
