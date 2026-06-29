@@ -10,7 +10,7 @@ const SERVICES = [
     desc: "Tailored to your style & face shape",
     price: "$45",
     popular: false,
-    image: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1622288432450-277d0fef5ed6?w=600&q=80",
   },
   {
     name: "Skin Fade",
