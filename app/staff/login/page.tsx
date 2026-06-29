@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Lock, Eye, EyeOff, Scissors, ArrowRight } from "lucide-react";
+import { Lock, Eye, EyeOff, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence, useMotionValue, useTransform } from "framer-motion";
 
 export default function StaffLoginPage() {

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Scissors, Calendar, Clock, User, Tag, LogOut, ChevronRight } from "lucide-react";
+import { Calendar, Clock, User, Tag, LogOut, ChevronRight, Scissors } from "lucide-react";
 import { calcWithOffer } from "@/lib/pricing";
 
 interface Booking {
@@ -80,8 +80,8 @@ export default function AppointmentsPage() {
       <div className="sticky top-0 z-20 bg-[#0A0A0A]/95 backdrop-blur border-b border-white/[0.05]">
         <div className="max-w-3xl mx-auto px-5 h-14 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Link href="/" className="w-7 h-7 rounded-lg bg-[#C4783A] flex items-center justify-center">
-              <Scissors className="w-3.5 h-3.5 text-[#080808]" strokeWidth={2.5} />
+            <Link href="/">
+              <img src="/logo.jpeg" alt="Haus of Cuts" className="w-7 h-7 rounded-lg object-cover" />
             </Link>
             <div>
               <span className="font-serif font-600 text-white text-[0.95rem]">My Appointments</span>

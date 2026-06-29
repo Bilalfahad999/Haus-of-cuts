@@ -190,9 +190,7 @@ export default function StaffDashboard() {
       <nav className="sticky top-0 z-30 bg-[#0A0A0A]/95 backdrop-blur border-b border-white/[0.05]">
         <div className="max-w-7xl mx-auto px-5 h-14 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-7 h-7 rounded-lg bg-[#C4783A] flex items-center justify-center">
-              <Scissors className="w-3.5 h-3.5 text-[#080808]" strokeWidth={2.5} />
-            </div>
+            <img src="/logo.jpeg" alt="Haus of Cuts" className="w-7 h-7 rounded-lg object-cover" />
             <span className="font-serif font-700 text-white">Haus of Cuts</span>
             <span className="hidden sm:inline text-[0.65rem] tracking-widest uppercase text-[#555] border border-white/[0.06] px-2 py-0.5 rounded-full ml-1">
               Staff Dashboard
