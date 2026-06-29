@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Scissors } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
   { href: "#home", label: "Home" },
@@ -43,9 +43,11 @@ export default function Navbar() {
       <div className="container-narrow flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#C4783A] to-[#E8976A] flex items-center justify-center group-hover:shadow-[0_0_20px_rgba(196,120,58,0.5)] transition-all duration-300">
-            <Scissors className="w-4.5 h-4.5 text-[#080808]" strokeWidth={2.5} />
-          </div>
+          <img
+            src="/logo.jpeg"
+            alt="Haus of Cuts"
+            className="w-10 h-10 rounded-full object-cover group-hover:shadow-[0_0_20px_rgba(196,120,58,0.5)] transition-all duration-300"
+          />
           <span className="font-serif text-lg font-700 tracking-wide text-[#FFFFFF]">
             Haus <span className="gold-text">of Cuts</span>
           </span>

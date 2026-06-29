@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import Link from "next/link";
-import { Scissors, Phone, MapPin } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
 import { BRAND, HOURS_COMPACT } from "@/lib/constants";
 
 function InstagramIcon({ className }: { className?: string }) {
@@ -42,9 +42,11 @@ export default function Footer() {
           {/* Brand column */}
           <div>
             <Link href="/" className="inline-flex items-center gap-2.5 mb-5">
-              <div className="w-8 h-8 rounded-full bg-[#C4783A] flex items-center justify-center">
-                <Scissors className="w-4 h-4 text-[#080808]" strokeWidth={2.5} />
-              </div>
+              <img
+                src="/logo.jpeg"
+                alt="Haus of Cuts"
+                className="w-9 h-9 rounded-full object-cover"
+              />
               <span className="font-serif text-lg font-700 text-[#FFFFFF]">
                 Haus <span className="gold-text">of Cuts</span>
               </span>
