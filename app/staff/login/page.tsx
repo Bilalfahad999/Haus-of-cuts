@@ -97,11 +97,10 @@ export default function StaffLoginPage() {
                   initial={{ scale: 0.6, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ type: "spring", duration: 0.8 }}
-                  className="w-14 h-14 rounded-2xl mx-auto mb-4 flex items-center justify-center relative overflow-hidden"
-                  style={{ background: "rgba(196,120,58,0.12)", border: "1px solid rgba(196,120,58,0.25)" }}
+                  className="w-14 h-14 rounded-2xl mx-auto mb-4 overflow-hidden"
+                  style={{ border: "1px solid rgba(196,120,58,0.25)" }}
                 >
-                  <Scissors className="w-7 h-7 text-[#C4783A]" strokeWidth={2} />
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#C4783A]/10 to-transparent" />
+                  <img src="/logo.jpeg" alt="Haus of Cuts" className="w-full h-full object-cover" />
                 </motion.div>
                 <motion.h1
                   initial={{ opacity: 0, y: 8 }}
