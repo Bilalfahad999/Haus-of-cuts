@@ -45,14 +45,14 @@ const SERVICES = [
     desc: "Steam, blade and calm in sequence",
     price: "$50",
     popular: false,
-    image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80",
+    image: "/hot-towel-shave.jpg",
   },
   {
     name: "Beard Trim",
     desc: "Sculpted to complement your features",
     price: "$30",
     popular: false,
-    image: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=80",
+    image: "/beard-trim.jpg",
   },
   {
     name: "VIP Package",
@@ -123,7 +123,7 @@ export default function ServicesSection() {
                 description={s.desc}
                 price={s.price}
                 logoNode={s.popular ? <Star className="w-4 h-4 fill-current" /> : <Scissors className="w-4 h-4" />}
-                imagePosition={s.name === "Kids Haircut" || s.name === "Buzz Cut" ? "top" : "center"}
+                imagePosition={["Kids Haircut", "Buzz Cut", "Hot Towel Shave"].includes(s.name) ? "top" : "center"}
                 className={s.popular ? "border border-[rgba(196,120,58,0.3)] shadow-[0_8px_32px_rgba(196,120,58,0.1)]" : ""}
               />
             </div>
