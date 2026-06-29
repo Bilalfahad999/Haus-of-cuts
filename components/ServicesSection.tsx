@@ -38,7 +38,7 @@ const SERVICES = [
     desc: "Gentle & precise for young gentlemen",
     price: "$30",
     popular: false,
-    image: "https://images.unsplash.com/photo-1560066984-138daaa7d558?w=600&q=80",
+    image: "/kids-haircut.jpg",
   },
   {
     name: "Hot Towel Shave",
@@ -123,6 +123,7 @@ export default function ServicesSection() {
                 description={s.desc}
                 price={s.price}
                 logoNode={s.popular ? <Star className="w-4 h-4 fill-current" /> : <Scissors className="w-4 h-4" />}
+                imagePosition={s.name === "Kids Haircut" ? "top" : "center"}
                 className={s.popular ? "border border-[rgba(196,120,58,0.3)] shadow-[0_8px_32px_rgba(196,120,58,0.1)]" : ""}
               />
             </div>

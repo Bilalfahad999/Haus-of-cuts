@@ -10,6 +10,7 @@ interface InteractiveProductCardProps extends React.HTMLAttributes<HTMLDivElemen
   title: string;
   description: string;
   price: string;
+  imagePosition?: string;
 }
 
 export function InteractiveProductCard({
@@ -20,6 +21,7 @@ export function InteractiveProductCard({
   title,
   description,
   price,
+  imagePosition = "center",
   ...props
 }: InteractiveProductCardProps) {
   const cardRef = React.useRef<HTMLDivElement>(null);
@@ -88,7 +90,7 @@ export function InteractiveProductCard({
         src={imageUrl}
         alt={title}
         className="absolute inset-0 h-full w-full object-cover rounded-2xl md:rounded-3xl"
-        style={imageStyle}
+        style={{ ...imageStyle, objectPosition: imagePosition }}
         loading="lazy"
       />
 
