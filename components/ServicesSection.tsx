@@ -31,7 +31,7 @@ const SERVICES = [
     desc: "Complete grooming in one session",
     price: "$75",
     popular: true,
-    image: "/hair-beard-combo.jpg",
+    image: "/hair-beard-combo.png",
   },
   {
     name: "Kids Haircut",
@@ -45,21 +45,21 @@ const SERVICES = [
     desc: "Steam, blade and calm in sequence",
     price: "$50",
     popular: false,
-    image: "/hot-towel-shave.jpg",
+    image: "/hot-towel-shave.png",
   },
   {
     name: "Beard Trim",
     desc: "Sculpted to complement your features",
     price: "$30",
     popular: false,
-    image: "/beard-trim.jpg",
+    image: "/beard-trim.png",
   },
   {
     name: "VIP Package",
     desc: "Cut, beard, hot towel & premium products",
     price: "$120",
     popular: false,
-    image: "/vip-package.jpg",
+    image: "/vip-package.png",
   },
 ];
 
